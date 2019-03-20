@@ -1,0 +1,86 @@
+/*!
+ * Start Bootstrap - Thumbnail Gallery (https://startbootstrap.com/template-overviews/thumbnail-gallery)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-thumbnail-gallery/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+#dropdownMenuButton {
+
+  border: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+ #addi{
+   background-color:white;
+   border: none;
+   border-radius: 50%;
+   margin-left: 15px;
+ }
+ #btn-user{
+   margin-left: 10px;
+
+
+ }
+ #notf{
+  border-radius: 50%;
+   background-color: white;
+     border: none;
+     margin-left: 15px;
+
+ }
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+    @font-face {
+        font-family: "nikotinus";
+        src: url("../New folder/nikotinusDEMO.otf");
+   }
+@font-face {
+        font-family: "swingdevil";
+        src: url("../New folder/swingdevilDEMO.otf");
+    }
+    @font-face {
+    font-family: "JMH Coronilla";
+    src: url("../New folder/JMH Coronilla.otf");
+         url("fonts/JMH Coronilla.ttf");
+    }
+    @font-face {
+    font-family: "Digidon Demo";
+    src: url("../New folder/Digidon Demo.ttf");
+    }
+@font-face {
+    font-family: "Commanders";
+    src: url("../New folder/Commanders.ttf");
+}
+@font-face {
+    font-family: "Commanders1";
+    src: url("../New folder/Commanders-2.ttf");
+}
+@font-face {
+    font-family: "v";
+    src: url("../New folder/Victorious.ttf");
+}
+
+.navbar-brand{
+    font-family: "Commanders";
+    font-size: 20pt;
+    font-style: oblique;
+
+}
+#s{
+    background-color: #fef8fa;
+}
+#hj{
+height: 30pt;
+    border-radius: 50%;
+}
+
+

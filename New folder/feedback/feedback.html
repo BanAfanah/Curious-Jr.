@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="feedback_style.css">
+    <script type="text/javascript" src="feedback_script.js"></script>
+</head>
+<body>
+
+
+
+<p id="line">&emsp;&emsp;&emsp;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+<input type="image" src="feedback.png" name="send feedback" class="feedback_img" title="Send feedback?" onclick="openFeedback()" />
+
+<div class="mask"></div>
+
+<container class="container">
+
+<dialog id="window" class="window">
+    <img src="bg.jpg" class="feed_img">
+    <div class="text">Send feedback</div>
+    <textarea id="feedback" rows = "17" cols="60" placeholder="Tell us about your thoughts..."></textarea>
+    <button class="send" id="send" onclick="sendFeedback()" >Send</button>
+    <button class="close" id="close" onclick="closeFeedback()">Close</button>
+    </dialog>
+
+</container>
+
+
+</body>
+</html>

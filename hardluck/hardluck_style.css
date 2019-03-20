@@ -1,0 +1,150 @@
+* {margin: 0; padding: 0;}
+
+.container{
+    padding: 0px;
+    margin: 0 auto;
+    width: 80%
+}
+header
+{
+    background: #262640;
+    position: relative;
+}
+.logo
+{
+    float: left;
+    padding: 0px;
+    margin: 0px;
+}
+.logoimg
+{
+    padding: 0px;
+    margin: 0px;
+    width: 500px;
+    height: 100%
+
+}
+header::after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+.nav
+{
+    float:right;
+}
+
+nav ul
+{
+    margin: 0px;
+    padding-left: 0px;
+    list-style: none;
+    margin-left:860px;
+    margin-right: 0px;
+}
+
+nav li
+{
+    display: inline-block;
+    padding-top: 35px;
+    font-family: "Courier New";
+    margin-left: 25px;
+}
+
+nav a {
+    float: none;
+    color: #fff;
+    line-height:1em;
+    text-decoration: none;
+    text-shadow:none;
+    z-index:100;
+    outline:0;
+}
+
+nav a:focus,
+nav a:hover {
+    text-decoration: underline;
+    color:#fff;
+    background-color: transparent;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+}
+
+body
+{
+    font-family: montserrat, arial, verdana;
+    background: linear-gradient(rgba(102, 0, 204, 0.6), rgba(153, 51, 153, 0.6));
+    height: 660px;
+}
+
+
+
+.cheerup
+{
+    font-size:30px;
+    font-family: "Courier New";
+    width:1000px;
+    height: 100px;
+    color: yellow;
+    padding-left:430px;
+    padding-top:111px;
+    display:block;
+
+}
+
+.exit
+{
+    background-color: #4CAF50;
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    margin-top:160px;
+    margin-left:150px;
+}
+.exit:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.do
+{
+    background-color: #4CAF50;
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    margin-top:0px;
+    margin-left:460px;
+}
+.do:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+audio
+{
+    display: none;
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paint</title>
+    <link href="css2/header_style.css" rel='stylesheet' type='text/css'/>
+    <link href="css/font-awesome.css" rel="stylesheet"> <!-- Font-Awesome-Icons-CSS -->
+     <!-- CSS -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css2/paint_style.css">
+    <script src="js2/paint_script.js"> </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+
+
+    <!-- JS -->
+    <script type="text/javascript" src="js2/Get-StartedJS.js"></script>
+</head>
+<body >
+
+<div class="layer">
+    <!-- Banner -->
+    <header class="default-header">
+        <div class="container">
+            <div class="header-wrap">
+                <div class="header-top d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <a href="#"><img src="img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="main-menubar d-flex align-items-center">
+                        <nav  class="hide">
+                            <form action="logoutcode.php" methode="post">
+                                <a href="../categ/categ-page-main.php">   go back</a>
+                                <input type="submit" name="logout" value="LOGOUT" >
+                            </form> </nav>
+                        <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+
+
+
+
+
+
+
+    <div class="jumbotron">
+
+        <div id='colors row'>
+            <div class="col-xs-4">
+                <button id='black' class="btn btn-block btn-primary" onclick='changeColor("black")' ontouchstart='changeColor("black")'>black</button>
+            </div>
+            <div class="col-xs-4">
+                <button id='red' class="btn btn-block btn-primary" onclick='changeColor("red")' ontouchstart='changeColor("red")'>red</button>
+            </div>
+            <div class="col-xs-4">
+                <button id='green' class="btn btn-block btn-primary" onclick='changeColor("green")' ontouchstart='changeColor("green")'>green</button>
+            </div>
+            <div class="col-xs-4">
+                <button id='blue' class="btn btn-block btn-primary" onclick='changeColor("blue")' ontouchstart='changeColor("blue")'>blue</button>
+            </div>
+            <div class="col-xs-4">
+                <button id='orange' class="btn btn-block btn-primary" onclick='changeColor("orange")' ontouchstart='changeColor("orange")'>orange</button>
+            </div>
+            <div class="col-xs-4">
+                <button id='pink' class="btn btn-block btn-primary" onclick='changeColor("pink")' ontouchstart='changeColor("pink")'>pink</button>
+            </div>
+            <div class="col-xs-4">
+                <button id='white' class="btn btn-block btn-primary" onclick='changeColor("white")' ontouchstart='changeColor("white")'>white or eraser</button>
+            </div>
+            <div class="col-xs-4">
+                <button id='yellow' class="btn btn-block btn-primary" onclick='changeColor("yellow")' ontouchstart='changeColor("yellow")'>yellow</button>
+            </div>
+            <div class="col-xs-4">
+                <button id='brown' class="btn btn-block btn-primary" onclick='changeColor("brown")' ontouchstart='changeColor("brown")'>brown</button>
+            </div>
+
+
+
+
+<canvas id='canvas' width="475px" height="220px"></canvas>
+
+<h4 id=clear class=text-center>Line width:</h4>
+<div id="row">
+    <div class="col-xs-6">
+        <button class="btn btn-block btn-primary" id='sizeDown' onclick='changeSize("-")'>-</button>
+    </div>
+    <div class="col-xs-6 text-right">
+        <button class="btn btn-block btn-primary" id='sizeUp' onclick='changeSize("+")'>+</button>
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <div class="footer-w3l">
+        <div class="botimg">
+            <img src="img/logo.png">
+        </div>
+        <p class="agileinfo" style="font-family: nikotinus"> &copy; 2018 Curious Jr. All Rights Reserved </p>
+    </div>
+
+<script>
+    function insert() {
+        var m= new XMLHttpRequest();
+        m.open("GET","m.php?name="+document.getElementById('name').value+"&email="+document.getElementById('email').value+"&pass="+document.getElementById('pass').value,flase);
+        m.send(null);
+    }
+    /*function login() {
+         var m= new XMLHttpRequest();
+         m.open("post","k.php?&em="+document.getElementById('em').value+"&password="+document.getElementById('passs').value,flase);
+         m.send(null);
+     }*/
+</script>
+
+<script src="js/vendor/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="js/simple-lightbox.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

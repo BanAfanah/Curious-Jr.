@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logic Game</title>
+    <link href="css2/header_style.css" rel='stylesheet' type='text/css'/>
+    <link href="css/font-awesome.css" rel="stylesheet"> <!-- Font-Awesome-Icons-CSS -->
+     <!-- CSS -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css2/my_css.css">
+    <!-- JS -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+    <script type="text/javascript" src="js2/Get-StartedJS.js"></script>
+    <script type="text/javascript" src="js2/my_js.js"></script>
+</head>
+<body>
+
+<div class="layer">
+    <!-- Banner -->
+    <header class="default-header">
+        <div class="container">
+            <div class="header-wrap">
+                <div class="header-top d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <a href="#"><img src="img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="main-menubar d-flex align-items-center">
+                        <nav  class="hide">
+                            <form action="logoutcode.php" methode="post">
+                                <a href="../categ/categ-page-main.php">   GO BACK</a>
+                                <a href="../su/udatephp.php">view profile</a>
+                                <input type="submit" name="logout" value="LOGOUT" id="eee" >
+                            </form> </nav>
+                        <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+
+
+
+    <div id="game">
+        <svg id="paths" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="360px" height="460px" viewBox="0 0 360 460" E="xMidYMid meet">
+            <path fill="#000000" d="M21 41l7 0 0 -14c0,-1 1,-2 2,-2 1,0 2,1 2,2l0 14 8 0 0 -14c0,-1 1,-2 2,-2 1,0 2,1 2,2l0 14 7 0c1,0 2,0 2,2l0 3c0,2 -1,3 -2,3l-1 0 0 6c0,5 -4,9 -8,9l0 3c0,1 -1,2 -2,2l-8 0c-1,0 -2,-1 -2,-2l0 -3c-4,0 -8,-4 -8,-9l0 -6 -1 0c-1,0 -2,-1 -2,-3l0 -3c0,-2 1,-2 2,-2z"/>
+            <line fill="none" stroke="#000000" stroke-width="4" x1="36" y1="68" x2="36" y2= "172" />
+            <path fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round" d="M324 172l0 -16c0,-10 -9,-18 -18,-17 -3,1 -7,3 -9,2 -4,-2 -5,-9 -2,-9 2,0 16,6 14,2 0,-2 -21,-8 -19,-11 3,-3 24,8 23,3 -1,-4 -24,-7 -23,-12 1,-4 26,9 27,4 0,-4 -22,-9 -25,-11 -6,-5 -3,-13 -4,-17 -1,-3 -4,-8 -5,-10 -1,-1 -5,-4 -7,-12 -2,-9 -4,-18 4,-28 8,-10 24,-14 34,-11 10,2 25,14 23,33 -1,9 -7,15 -12,20 -12,10 -6,23 -12,24 -2,1 -4,1 -7,1 -6,-2 -3,-18 -4,-25 -1,-6 -5,-7 -8,-11 -2,-3 1,-5 5,-2 2,3 2,-1 4,-4 3,-4 6,-1 6,1 0,3 1,7 4,1 2,-4 7,-1 5,4 -3,6 -5,6 -10,9"/>
+            <path id="mainpath" fill="none" stroke="#000000" stroke-width="4" d="M36 68l0 104 0 216c0,20 16,36 36,36l216 0c20,0 36,-16 36,-36l0 -216"/>
+            <circle id="maincircle" fill="#fffd56" cx="0" cy="0" r="7">
+                <animateMotion dur="1.5s" calcmode="linear" repeatCount="indefinite">
+                    <mpath xlink:href="#mainpath"/>
+                </animateMotion>
+            </circle>
+        </svg>
+        <div style="position:absolute;top:15px;left:0;width:320px;text-align:center;">TURN ON</div>
+        <div style="position:absolute;top:40px;left:0;width:320px;text-align:center;">THE LIGHT</div>
+        <div id="level" style="position:absolute;top:70px;left:0;width:320px;text-align:center;font-size:21px;display:none;">Level: <span>0</span></div>
+        <div id="moves" style="position:absolute;top:95px;left:0;width:320px;text-align:center;font-size:21px;display:none;">Moves: <span>0</span></div>
+        <svg id="complete" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="360px" height="460px" viewBox="0 0 360 460" E="xMidYMid meet">
+        </svg>
+        <div id="lighton"></div>
+        <div id="info" style="position:absolute;top:90px;left:50px;width:220px;height:auto;font-size:18px;text-align:center;">
+            Click on cable<br>
+            segments to rotate<br>
+            clockwise until all<br>
+            the segments are in<br>
+            the correct position.
+        </div>
+        <div id="div_levels" style="position:absolute;top:248px;left:52px;width:260px;height:165px;font-size:18px;text-align:center;"></div>
+        <div class="btn" id="b_menu" style="left:85px;">MENU</div>
+        <div class="btn" id="b_next" style="left:150px;">NEXT LEVEL</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <div class="footer-w3l">
+        <div class="botimg">
+            <img src="img/logo.png">
+        </div>
+        <p class="agileinfo" style="font-family: nikotinus"> &copy; 2018 Curious Jr. All Rights Reserved </p>
+    </div>
+
+<script>
+    function insert() {
+        var m= new XMLHttpRequest();
+        m.open("GET","m.php?name="+document.getElementById('name').value+"&email="+document.getElementById('email').value+"&pass="+document.getElementById('pass').value,flase);
+        m.send(null);
+    }
+    /*function login() {
+         var m= new XMLHttpRequest();
+         m.open("post","k.php?&em="+document.getElementById('em').value+"&password="+document.getElementById('passs').value,flase);
+         m.send(null);
+     }*/
+</script>
+
+<script src="js/vendor/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="js/simple-lightbox.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
